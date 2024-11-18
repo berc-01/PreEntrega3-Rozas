@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER - ENCABEZADO */
+
+header{
+    font-family: "Nunito", sans-serif;
+    padding: 10px;
+    background-color: rgb(228, 92, 92);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+header div img{
+    width: 75px;
+    height: 75px;
+}
+
+header div h1{
+    font-family: "Nunito", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    margin-left: 10px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+}
+
+header nav ul li{
+    margin: 0px 30px 0px 30px;
+}
+
+header nav ul li a{
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* INDEX.HTML */
+
+/* HERO */
+
+.hero{
+    font-family: "Nunito", sans-serif;
+    height: calc(100vh - 95px);
+    background-image: url(https://i.imgur.com/bxhgDiU.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(75, 75, 75);
+    background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.descripción_paws{
+    font-size: 20px;
+    width: 700px;
+}
+
+.descripción_pawhub{
+    font-size: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.descripción_paws h1{
+    color: red;
+}
+
+.descripción_pawhub h1{
+    margin-bottom: 30px;
+}
+
+.descripción_pawhub a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+}
+
+
+
+/* VIDEOJUEGOS */
+
+.videojuegos{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.videojuegos div{
+    width: 400px;
+    height: 350px
+}
+
+.videojuegos div h1{
+    font-family: "Nunito", sans-serif;
+    font-size: 40px;
+}
+
+.videojuegos p{
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tarjeta_tarkov{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_tarkov img{
+    width: 450px;
+    height: 200px;
+}
+
+.tarjeta_indigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_indigo img{
+    width:300px;
+    height: 200px;
+}
+
+.tarjeta_nitw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_nitw img{
+    width: 200px;
+    height: 200px;
+}
+
+.videojuegos div a{
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+}
+
+/* PRODUCTOS.HTML */
+
+.productos_videojuegos{
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.tarkov{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.tarkov h1{
+    font-size: 30px;
+}
+
+.tarkov img{
+    width: 525px;
+}
+
+.tarkov p{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tarkov a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+}
+
+.nitw{
+    margin-bottom: 50px;
+}
+
+.nitw h1{
+    font-size: 30px;
+}
+
+.nitw img{
+    width: 475px;
+}
+
+.nitw p{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.nitw a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+}
+
+.indigo{
+    margin-bottom: 50px;
+}
+
+.indigo h1{
+    font-size: 30px;
+}
+
+.indigo img{
+    width: 350px;
+}
+
+.indigo p{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.indigo a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+}
+
+/* PLATAFORMA.HTML */
+
+.pawhub_hero{
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 500px;
+    margin-left: 50px;
+    margin-top: 225px;
+}
+
+.pawhub_hero h1{
+    color: red;
+    font-size: 40px;
+    width: 800px;
+}
+
+.pawhub_hero p{
+    font-size: 30px;
+    width: 800px;
+}
+
+.pawhublogo{
+    margin-top: 80px;
+    margin-left: 300px;
+}
+
+/* NOSOTROS.HTML */
+
+.about{
+    height: 100vh;
+    background-image: url(../img/oficinas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(75, 75, 75);
+    background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+    color: white;
+
+    font-family: "Nunito", sans-serif;
+    text-align: justify;
+}
+
+.about h1{
+    color: red;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 200px;
+    margin-bottom: 30px;
+}
+
+.about p{
+    font-size: 30px;
+    width: 1300px;
+    margin-left: 300px;
+}
+
+/* CONTACTO.HTML */
+
+.formulario{
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+.maps{
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+/* PIE DE PÁGINA */
+
+footer{
+    padding: 10px;
+    background-color: rgb(228, 92, 92);
+    display: flex;
+    align-items: center;
+}
+
+.footer_logo_nombre{
+    display: flex;
+    align-items: center;
+}
+
+.footer_logo_nombre img{
+    width: 50px;
+    height: 50px;
+}
+
+.footer_logo_nombre h2{
+    font-family: "Nunito", sans-serif;
+    margin-right: 10px;
+}
+
+.redes{
+    display: flex;
+
+}
+
+.redes img{
+    width: 50px;
+    height: 50px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:920px){
+    header{
+        flex-direction: column;
+    }
+    
+    header div{
+        margin-bottom: 10px;
+    }
+
+    .videojuegos{
+        flex-direction: column;
+    }
+    
+    .descripción_paws{
+        width: 550px;
+    }
+    
+    .descripción_pawhub{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:700px){
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header div{
+        display: flex;
+    }
+
+    header nav ul{
+        flex-direction: column;
+    }
+
+    header nav ul li{
+        font-size: 15px;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .descripción_paws{
+        font-size: 15px;
+        width: 450px;
+    }
+    
+    .descripción_pawhub{
+        font-size: 15px;
+        width: 450px;
+    }
+
+    .videojuegos div{
+        height: auto;
+        width: 350px;
+    }
+
+    .videojuegos div h1{
+        font-size: 20px;
+    }
+
+    .videojuegos div p{
+        font-size: 15px;
+    }
+
+    .videojuegos div a{
+        font-size: 15px;
+    }
+
+    .tarjeta_tarkov img{
+        height: auto;
+        width: 100%;
+    }
+
+    .tarjeta_indigo img{
+        height: auto;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .hero{
+        flex-direction: column;
+    }
+
+    .descripción_paws{
+        width: 250px;
+    }
+    
+    .descripción_pawhub{
+        width: 250px;
+    }
+    
+    .videojuegos div{
+        height: auto;
+        width: 250px;
+    }
+
+    .tarjeta_tarkov img{
+        height: auto;
+        width: 100%;
+    }
+
+    .tarjeta_indigo img{
+        height: auto;
+        width: 150px;
+    }
+}
