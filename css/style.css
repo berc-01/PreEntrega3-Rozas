@@ -37,6 +37,10 @@ header div h1{
     margin-bottom: 0px;
 }
 
+.dropdown{
+    display: none;
+}
+
 header nav ul{
     display: flex;
     list-style: none;
@@ -76,14 +80,14 @@ header nav ul li a{
     flex-wrap: wrap;
 }
 
-.descripción_paws{
+.descripcion_paws{
     font-size: 20px;
     width: 700px;
     height: 288px;
     margin-bottom: 0px;
 }
 
-.descripción_pawhub{
+.descripcion_pawhub{
     font-size: 20px;
     width: 700px;
     height: 288px;
@@ -93,7 +97,7 @@ header nav ul li a{
     align-items: center;
 }
 
-.descripción_paws h1{
+.descripcion_paws h1{
     margin-bottom: 0px;
 }
 
@@ -101,11 +105,11 @@ header nav ul li a{
     color: red;
 }
 
-.descripción_pawhub h1{
+.descripcion_pawhub h1{
     margin-bottom: 0px;
 }
 
-.descripción_pawhub a{
+.descripcion_pawhub a{
     text-decoration: none;
     color: white;
     background-color: rgb(55, 143, 224);
@@ -119,7 +123,7 @@ header nav ul li a{
 
 .videojuegos{
     font-family: "Nunito", sans-serif;
-    background-color: rgba(63, 63, 63, 0.603);
+    background-color: hsla(0, 0%, 0%, 0.800);
     padding: 30px;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -144,11 +148,13 @@ header nav ul li a{
 .videojuegos div h1{
     font-size: 40px;
     margin-bottom: 0px;
+    color: white;
 }
 
 .videojuegos p{
     font-size: 20px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .tarjeta_tarkov{
@@ -231,89 +237,155 @@ header nav ul li a{
 
 .productos_videojuegos{
     font-family: "Nunito", sans-serif;
-    text-align: center;
+    background-color: hsla(0, 0%, 0%, 0.800);
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 200px 15px; 
+    grid-template-areas: 
+        "tarkov tarkov trailer_tarkov"
+        "trailer_nitw nitw nitw"
+        "indigo indigo trailer_indigo"
+        "trailer_webfishing webfishing webfishing"
+        "zomboid zomboid trailer_zomboid"
+        "trailer_astroneer astroneer astroneer"; 
+}
+    .tarkov { grid-area: tarkov; }
+    .trailer_tarkov { grid-area: trailer_tarkov; }
+    .trailer_nitw { grid-area: trailer_nitw; }
+    .trailer_indigo { grid-area: trailer_indigo; }
+    .trailer_webfishing { grid-area: trailer_webfishing; }
+    .trailer_zomboid { grid-area: trailer_zomboid; }
+    .trailer_astroneer { grid-area: trailer_astroneer; }
+    .nitw { grid-area: nitw; }
+    .indigo { grid-area: indigo; }
+    .webfishing { grid-area: webfishing; }
+    .zomboid { grid-area: zomboid; }
+    .astroneer { grid-area: astroneer; }
+
+.productos_videojuegos div{
+    width: 100%;
+    height: 100%;
+}
+
+.productos_videojuegos div p{
+    color: white;
+}
+
+.productos_videojuegos div img{
+    height: auto;
+}
+
+.productos_videojuegos a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(55, 143, 224);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.trailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tarkov{
-    padding-top: 50px;
-    margin-bottom: 50px;
-}
-
-.tarkov h1{
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tarkov img{
-    width: 525px;
+    width: 50%;
 }
 
 .tarkov p{
-    text-align: justify;
     font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.tarkov a{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    background-color: rgb(55, 143, 224);
-    padding: 10px;
-    border-radius: 15px;
+    width: 95%;
 }
 
 .nitw{
-    margin-bottom: 50px;
-}
-
-.nitw h1{
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nitw img{
-    width: 475px;
+    width: 25%;
 }
 
 .nitw p{
-    text-align: justify;
     font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.nitw a{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    background-color: rgb(55, 143, 224);
-    padding: 10px;
-    border-radius: 15px;
+    width: 95%;
 }
 
 .indigo{
-    margin-bottom: 50px;
-}
-
-.indigo h1{
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .indigo img{
-    width: 350px;
+    width: 30%;
 }
 
 .indigo p{
-    text-align: justify;
     font-size: 20px;
-    margin-bottom: 20px;
+    width: 95%;
 }
 
-.indigo a{
-    text-decoration: none;
+.webfishing img{
+    width: 30%;
+}
+
+.webfishing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.webfishing p{
     font-size: 20px;
-    color: white;
-    background-color: rgb(55, 143, 224);
-    padding: 10px;
-    border-radius: 15px;
+    width: 95%;
+}
+
+.zomboid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zomboid img{
+    width: 30%;
+}
+
+.zomboid p{
+    font-size: 20px;
+    width: 95%;
+}
+
+.astroneer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.astroneer img{
+    width: 30%;
+}
+
+.astroneer p{
+    font-size: 20px;
+    width: 95%;
 }
 
 /* PLATAFORMA.HTML */
@@ -388,6 +460,7 @@ header nav ul li a{
 /* PIE DE PÁGINA */
 
 footer{
+    font-family: "Nunito", sans-serif;
     padding: 10px;
     background-color: rgb(228, 92, 92);
     display: flex;
@@ -406,6 +479,8 @@ footer{
 
 .footer_logo_nombre h2{
     margin-right: 10px;
+    color: white;
+    margin-bottom: 0;
 }
 
 .redes{
@@ -418,7 +493,7 @@ footer{
     height: 50px;
 }
 
-/* MEDIA QUERIES */
+/* INDEX.HTML MEDIA QUERIES */
 
 @media screen and (max-width:1275px){
     .videojuegos{
@@ -440,11 +515,11 @@ footer{
         margin-bottom: 10px;
     }
     
-    .descripción_paws{
+    .descripcion_paws{
         width: 550px;
     }
     
-    .descripción_pawhub{
+    .descripcion_pawhub{
         width: 550px;
     }
 }
@@ -473,8 +548,12 @@ footer{
         display: flex;
     }
 
-    header nav ul{
-        flex-direction: column;
+    .menu{
+        display: none;
+    }
+
+    .dropdown{
+        display: initial;
     }
 
     header nav ul li{
@@ -482,12 +561,12 @@ footer{
         margin: 0px 10px 0px 10px;
     }
 
-    .descripción_paws{
+    .descripcion_paws{
         font-size: 15px;
         width: 450px;
     }
     
-    .descripción_pawhub{
+    .descripcion_pawhub{
         font-size: 15px;
         width: 450px;
     }
@@ -498,12 +577,12 @@ footer{
         flex-direction: column;
     }
 
-    .descripción_paws{
+    .descripcion_paws{
         width: 300px;
         height: auto;
     }
     
-    .descripción_pawhub{
+    .descripcion_pawhub{
         width: 300px;
         height: auto;
     }
@@ -515,5 +594,50 @@ footer{
     .videojuegos div img{
         width: 250px;
         height: auto;
+    }
+}
+
+/* PRODUCTOS.HTML MEDIA QUERIES */
+
+@media screen and (max-width:1155px){
+    .productos_videojuegos{
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        gap: 50px 15px; 
+        grid-template-areas: 
+            "tarkov "
+            "trailer_tarkov"
+            "nitw"
+            "trailer_nitw"
+            "indigo" 
+            "trailer_indigo"
+            "webfishing"
+            "trailer_webfishing"
+            "zomboid" 
+            "trailer_zomboid"
+            "astroneer" 
+            "trailer_astroneer"
+    }
+        .tarkov { grid-area: tarkov; }
+        .trailer_tarkov { grid-area: trailer_tarkov; }
+        .trailer_nitw { grid-area: trailer_nitw; }
+        .trailer_indigo { grid-area: trailer_indigo; }
+        .trailer_webfishing { grid-area: trailer_webfishing; }
+        .trailer_zomboid { grid-area: trailer_zomboid; }
+        .trailer_astroneer { grid-area: trailer_astroneer; }
+        .nitw { grid-area: nitw; }
+        .indigo { grid-area: indigo; }
+        .webfishing { grid-area: webfishing; }
+        .zomboid { grid-area: zomboid; }
+        .astroneer { grid-area: astroneer; }
+
+    .productos_videojuegos div p{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .trailer{
+        display: none;
     }
 }
