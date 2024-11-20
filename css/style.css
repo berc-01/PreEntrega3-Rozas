@@ -30,17 +30,19 @@ header div img{
 }
 
 header div h1{
-    font-family: "Nunito", sans-serif;
     font-size: 40px;
     font-weight: 800;
     color: white;
     margin-left: 10px;
+    margin-bottom: 0px;
 }
 
 header nav ul{
     display: flex;
     list-style: none;
     font-size: 20px;
+    margin-bottom: 0px;
+    padding-left: 0px;
 }
 
 header nav ul li{
@@ -48,7 +50,6 @@ header nav ul li{
 }
 
 header nav ul li a{
-    font-family: "Nunito", sans-serif;
     text-decoration: none;
     color: white;
 }
@@ -78,22 +79,30 @@ header nav ul li a{
 .descripción_paws{
     font-size: 20px;
     width: 700px;
+    height: 288px;
+    margin-bottom: 0px;
 }
 
 .descripción_pawhub{
     font-size: 20px;
     width: 700px;
+    height: 288px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .descripción_paws h1{
+    margin-bottom: 0px;
+}
+
+.h1_rojo{
     color: red;
 }
 
 .descripción_pawhub h1{
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .descripción_pawhub a{
@@ -101,6 +110,7 @@ header nav ul li a{
     color: white;
     background-color: rgb(55, 143, 224);
     padding: 10px;
+    border-radius: 15px;
 }
 
 
@@ -108,6 +118,7 @@ header nav ul li a{
 /* VIDEOJUEGOS */
 
 .videojuegos{
+    font-family: "Nunito", sans-serif;
     padding: 50px;
     display: flex;
     justify-content: space-around;
@@ -121,12 +132,10 @@ header nav ul li a{
 }
 
 .videojuegos div h1{
-    font-family: "Nunito", sans-serif;
     font-size: 40px;
 }
 
 .videojuegos p{
-    font-family: "Nunito", sans-serif;
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -165,12 +174,12 @@ header nav ul li a{
 }
 
 .videojuegos div a{
-    font-family: "Nunito", sans-serif;
     text-decoration: none;
     font-size: 20px;
     color: white;
     background-color: rgb(55, 143, 224);
     padding: 10px;
+    border-radius: 15px;
 }
 
 /* PRODUCTOS.HTML */
@@ -205,6 +214,7 @@ header nav ul li a{
     color: white;
     background-color: rgb(55, 143, 224);
     padding: 10px;
+    border-radius: 15px;
 }
 
 .nitw{
@@ -231,6 +241,7 @@ header nav ul li a{
     color: white;
     background-color: rgb(55, 143, 224);
     padding: 10px;
+    border-radius: 15px;
 }
 
 .indigo{
@@ -257,6 +268,7 @@ header nav ul li a{
     color: white;
     background-color: rgb(55, 143, 224);
     padding: 10px;
+    border-radius: 15px;
 }
 
 /* PLATAFORMA.HTML */
@@ -287,7 +299,7 @@ header nav ul li a{
 /* NOSOTROS.HTML */
 
 .about{
-    height: 100vh;
+    height: calc(100vh - 95px);
     background-image: url(../img/oficinas.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -348,7 +360,6 @@ footer{
 }
 
 .footer_logo_nombre h2{
-    font-family: "Nunito", sans-serif;
     margin-right: 10px;
 }
 
@@ -449,11 +460,13 @@ footer{
     }
 
     .descripción_paws{
-        width: 250px;
+        width: 300px;
+        height: auto;
     }
     
     .descripción_pawhub{
-        width: 250px;
+        width: 300px;
+        height: auto;
     }
     
     .videojuegos div{
