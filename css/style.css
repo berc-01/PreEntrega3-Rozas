@@ -119,20 +119,31 @@ header nav ul li a{
 
 .videojuegos{
     font-family: "Nunito", sans-serif;
-    padding: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    background-color: rgba(63, 63, 63, 0.603);
+    padding: 30px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 15px 15px; 
+    grid-template-areas: 
+        "tarjeta_tarkov tarjeta_nitw tarjeta_indigo"
+        "tarjeta_webfishing tarjeta_zomboid tarjeta_astroneer";
 }
+    .tarjeta_tarkov { grid-area: tarjeta_tarkov; }
+    .tarjeta_nitw { grid-area: tarjeta_nitw; }
+    .tarjeta_indigo { grid-area: tarjeta_indigo; }
+    .tarjeta_webfishing { grid-area: tarjeta_webfishing; }
+    .tarjeta_zomboid { grid-area: tarjeta_zomboid; }
+    .tarjeta_astroneer { grid-area: tarjeta_astroneer; }
 
 .videojuegos div{
-    width: 400px;
-    height: 350px
+    width: 100%;
+    height: 100%;
 }
 
 .videojuegos div h1{
     font-size: 40px;
+    margin-bottom: 0px;
 }
 
 .videojuegos p{
@@ -143,11 +154,12 @@ header nav ul li a{
 .tarjeta_tarkov{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .tarjeta_tarkov img{
-    width: 450px;
+    width: auto;
     height: 200px;
 }
 
@@ -158,7 +170,7 @@ header nav ul li a{
 }
 
 .tarjeta_indigo img{
-    width:300px;
+    width: auto;
     height: 200px;
 }
 
@@ -169,7 +181,40 @@ header nav ul li a{
 }
 
 .tarjeta_nitw img{
-    width: 200px;
+    width: auto;
+    height: 200px;
+}
+
+.tarjeta_webfishing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_webfishing img{
+    width: auto;
+    height: 200px;
+}
+
+.tarjeta_zomboid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_zomboid img{
+    width: auto;
+    height: 200px;
+}
+
+.tarjeta_astroneer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta_astroneer img{
+    width: auto;
     height: 200px;
 }
 
@@ -375,6 +420,17 @@ footer{
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width:1275px){
+    .videojuegos{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "tarjeta_tarkov tarjeta_nitw"
+            "tarjeta_indigo tarjeta_webfishing"
+            "tarjeta_zomboid tarjeta_astroneer"
+    }
+}
+
 @media screen and (max-width:920px){
     header{
         flex-direction: column;
@@ -383,10 +439,6 @@ footer{
     header div{
         margin-bottom: 10px;
     }
-
-    .videojuegos{
-        flex-direction: column;
-    }
     
     .descripción_paws{
         width: 550px;
@@ -394,6 +446,20 @@ footer{
     
     .descripción_pawhub{
         width: 550px;
+    }
+}
+
+@media screen and (max-width:870px){
+    .videojuegos{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "tarjeta_tarkov" 
+            "tarjeta_nitw"
+            "tarjeta_indigo" 
+            "tarjeta_webfishing"
+            "tarjeta_zomboid" 
+            "tarjeta_astroneer"
     }
 }
 
@@ -425,33 +491,6 @@ footer{
         font-size: 15px;
         width: 450px;
     }
-
-    .videojuegos div{
-        height: auto;
-        width: 350px;
-    }
-
-    .videojuegos div h1{
-        font-size: 20px;
-    }
-
-    .videojuegos div p{
-        font-size: 15px;
-    }
-
-    .videojuegos div a{
-        font-size: 15px;
-    }
-
-    .tarjeta_tarkov img{
-        height: auto;
-        width: 100%;
-    }
-
-    .tarjeta_indigo img{
-        height: auto;
-        width: 250px;
-    }
 }
 
 @media screen and (max-width:550px) {
@@ -468,19 +507,13 @@ footer{
         width: 300px;
         height: auto;
     }
-    
-    .videojuegos div{
-        height: auto;
+
+    .videojuegos div h1{
+        font-size: 30px;
+    }
+
+    .videojuegos div img{
         width: 250px;
-    }
-
-    .tarjeta_tarkov img{
         height: auto;
-        width: 100%;
-    }
-
-    .tarjeta_indigo img{
-        height: auto;
-        width: 150px;
     }
 }
