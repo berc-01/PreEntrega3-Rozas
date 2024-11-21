@@ -89,7 +89,6 @@ header nav ul li a:hover{
     font-size: 20px;
     width: 700px;
     height: 288px;
-    margin-bottom: 0px;
 }
 
 .descripcion_pawhub{
@@ -152,6 +151,10 @@ header nav ul li a:hover{
 .videojuegos div{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .videojuegos div h1{
@@ -166,22 +169,9 @@ header nav ul li a:hover{
     color: white;
 }
 
-.tarjeta_tarkov{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .tarjeta_tarkov img{
     width: auto;
     height: 200px;
-}
-
-.tarjeta_indigo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .tarjeta_indigo img{
@@ -189,21 +179,9 @@ header nav ul li a:hover{
     height: 200px;
 }
 
-.tarjeta_nitw{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .tarjeta_nitw img{
     width: auto;
     height: 200px;
-}
-
-.tarjeta_webfishing{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .tarjeta_webfishing img{
@@ -211,21 +189,9 @@ header nav ul li a:hover{
     height: 200px;
 }
 
-.tarjeta_zomboid{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .tarjeta_zomboid img{
     width: auto;
     height: 200px;
-}
-
-.tarjeta_astroneer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .tarjeta_astroneer img{
@@ -278,13 +244,19 @@ header nav ul li a:hover{
     .zomboid { grid-area: zomboid; }
     .astroneer { grid-area: astroneer; }
 
-.productos_videojuegos div{
+.productos_videojuegos div:not(.trailer){
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .productos_videojuegos div p{
     color: white;
+    font-size: 20px;
+    width: 95%;
 }
 
 .productos_videojuegos div img{
@@ -311,100 +283,28 @@ header nav ul li a:hover{
     align-items: center;
 }
 
-.tarkov{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .tarkov img{
     width: 50%;
-}
-
-.tarkov p{
-    font-size: 20px;
-    width: 95%;
-}
-
-.nitw{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .nitw img{
     width: 25%;
 }
 
-.nitw p{
-    font-size: 20px;
-    width: 95%;
-}
-
-.indigo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .indigo img{
     width: 30%;
-}
-
-.indigo p{
-    font-size: 20px;
-    width: 95%;
 }
 
 .webfishing img{
     width: 30%;
 }
 
-.webfishing{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.webfishing p{
-    font-size: 20px;
-    width: 95%;
-}
-
-.zomboid{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .zomboid img{
     width: 30%;
 }
 
-.zomboid p{
-    font-size: 20px;
-    width: 95%;
-}
-
-.astroneer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .astroneer img{
     width: 30%;
-}
-
-.astroneer p{
-    font-size: 20px;
-    width: 95%;
 }
 
 /* PLATAFORMA.HTML */
@@ -649,18 +549,6 @@ footer{
             "astroneer" 
             "trailer_astroneer"
     }
-        .tarkov { grid-area: tarkov; }
-        .trailer_tarkov { grid-area: trailer_tarkov; }
-        .trailer_nitw { grid-area: trailer_nitw; }
-        .trailer_indigo { grid-area: trailer_indigo; }
-        .trailer_webfishing { grid-area: trailer_webfishing; }
-        .trailer_zomboid { grid-area: trailer_zomboid; }
-        .trailer_astroneer { grid-area: trailer_astroneer; }
-        .nitw { grid-area: nitw; }
-        .indigo { grid-area: indigo; }
-        .webfishing { grid-area: webfishing; }
-        .zomboid { grid-area: zomboid; }
-        .astroneer { grid-area: astroneer; }
 
     .productos_videojuegos div p{
         width: 70%;
