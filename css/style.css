@@ -58,6 +58,11 @@ header nav ul li a{
     color: white;
 }
 
+header nav ul li a:hover{
+    color: rgb(0, 0, 0);
+    transition: 0.3s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+}
+
 
 /* INDEX.HTML */
 
@@ -115,8 +120,12 @@ header nav ul li a{
     background-color: rgb(55, 143, 224);
     padding: 10px;
     border-radius: 15px;
+    transition: 0.3s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
 }
 
+.descripcion_pawhub a:hover{
+    background-color: rgb(228, 92, 92);
+}
 
 
 /* VIDEOJUEGOS */
@@ -231,6 +240,11 @@ header nav ul li a{
     background-color: rgb(55, 143, 224);
     padding: 10px;
     border-radius: 15px;
+    transition: 0.3s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+}
+
+.videojuegos div a:hover{
+    background-color: rgb(228, 92, 92);
 }
 
 /* PRODUCTOS.HTML */
@@ -284,6 +298,11 @@ header nav ul li a{
     background-color: rgb(55, 143, 224);
     padding: 10px;
     border-radius: 15px;
+    transition: 0.3s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+}
+
+.productos_videojuegos a:hover{
+    background-color: rgb(228, 92, 92);
 }
 
 .trailer{
@@ -391,10 +410,13 @@ header nav ul li a{
 /* PLATAFORMA.HTML */
 
 .pawhub_hero{
+    height: calc(100vh - 95px);
     font-family: "Nunito", sans-serif;
-    margin-bottom: 500px;
-    margin-left: 50px;
-    margin-top: 225px;
+    background-color: hsla(0, 0%, 0%, 0.800);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .pawhub_hero h1{
@@ -404,13 +426,9 @@ header nav ul li a{
 }
 
 .pawhub_hero p{
+    color: white;
     font-size: 30px;
     width: 800px;
-}
-
-.pawhublogo{
-    margin-top: 80px;
-    margin-left: 300px;
 }
 
 /* NOSOTROS.HTML */
@@ -422,39 +440,41 @@ header nav ul li a{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgb(75, 75, 75);
+    background-color: hsla(0, 0%, 0%, 0.800);
     background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
     color: white;
-
     font-family: "Nunito", sans-serif;
-    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about h1{
     color: red;
     font-size: 40px;
-    text-align: center;
-    padding-top: 200px;
-    margin-bottom: 30px;
 }
 
 .about p{
     font-size: 30px;
     width: 1300px;
-    margin-left: 300px;
 }
 
 /* CONTACTO.HTML */
 
-.formulario{
+.contacto{
     font-family: "Nunito", sans-serif;
-    text-align: center;
-    margin: 40px;
+    background-color: hsla(0, 0%, 0%, 0.800);
+    height: calc(100vh - 95px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.maps{
-    text-align: center;
-    margin-bottom: 150px;
+.formulario{
+    color: white;
 }
 
 /* PIE DE PÁGINA */
@@ -483,14 +503,16 @@ footer{
     margin-bottom: 0;
 }
 
-.redes{
-    display: flex;
-
+.redes a{
+    margin: 0px 5px 0px 5px;
 }
 
-.redes img{
-    width: 50px;
-    height: 50px;
+.bi{
+    font-size: 40px;
+}
+
+.bi:hover{
+    color: rgb(0, 0, 0);
 }
 
 /* INDEX.HTML MEDIA QUERIES */
