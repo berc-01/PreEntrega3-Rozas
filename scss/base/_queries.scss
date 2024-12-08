@@ -1,0 +1,143 @@
+@media screen and (max-width:1275px){
+    .videojuegos{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "tarjeta_tarkov tarjeta_nitw"
+            "tarjeta_indigo tarjeta_webfishing"
+            "tarjeta_zomboid tarjeta_astroneer"
+    }
+}
+
+@media screen and (max-width:920px){
+    header{
+        flex-direction: column;
+    }
+    
+    header div{
+        margin-bottom: 10px;
+    }
+    
+    .hero .descripcion_paws{
+        width: 550px;
+    }
+    
+    .hero .descripcion_pawhub{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:870px){
+    .videojuegos{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "tarjeta_tarkov" 
+            "tarjeta_nitw"
+            "tarjeta_indigo" 
+            "tarjeta_webfishing"
+            "tarjeta_zomboid" 
+            "tarjeta_astroneer"
+    }
+}
+
+@media screen and (max-width:700px){
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header div{
+        display: flex;
+    }
+
+    header nav .menu{
+        display: none;
+    }
+
+    header nav .dropdown{
+        display: initial;
+        margin-left: 0px;
+    }
+
+    header nav ul li{
+        font-size: 15px;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .hero .descripcion_paws{
+        font-size: 15px;
+        width: 450px;
+    }
+    
+    .hero .descripcion_pawhub{
+        font-size: 15px;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    header{
+        justify-content: space-evenly;
+    }
+
+    header div h1{
+        display: none;
+    }
+
+    .hero{
+        flex-direction: column;
+    }
+
+    .hero .descripcion_paws{
+        width: 300px;
+        height: auto;
+    }
+    
+    .hero .descripcion_pawhub{
+        width: 300px;
+        height: auto;
+    }
+
+    .videojuegos div h1{
+        font-size: 30px;
+    }
+
+    .videojuegos div img{
+        width: 250px;
+        height: auto;
+    }
+}
+
+/* PRODUCTOS.HTML MEDIA QUERIES */
+
+@media screen and (max-width:1155px){
+    .productos_videojuegos{
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        gap: 50px 15px; 
+        grid-template-areas: 
+            "tarkov "
+            "trailer_tarkov"
+            "nitw"
+            "trailer_nitw"
+            "indigo" 
+            "trailer_indigo"
+            "webfishing"
+            "trailer_webfishing"
+            "zomboid" 
+            "trailer_zomboid"
+            "astroneer" 
+            "trailer_astroneer"
+    }
+
+    .productos_videojuegos div p{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .productos_videojuegos .trailer{
+        display: none;
+    }
+}

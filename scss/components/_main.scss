@@ -1,0 +1,185 @@
+// INDEX.HTML
+
+.hero{
+    height: $hero;
+    background-image: url(https://i.imgur.com/bxhgDiU.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: nth($colores, 4);
+    background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+    color: nth($colores, 5);
+    @include flex(flex, null, space-around, center);
+    flex-wrap: wrap;
+    .descripcion_paws{
+        width: 700px;
+        height: 288px;
+        h1{
+            color: nth($colores, 1);
+            font-size: 40px;
+        }
+        h2{
+            font-size: 40px;
+        }
+    }
+    .descripcion_pawhub{
+        width: 700px;
+        height: 288px;
+        @include flex(flex, column, space-between, center);
+        h2{
+            font-size: 40px;
+        }
+    }
+}
+
+.videojuegos{
+    background-color: nth($colores, 3);
+    padding: 30px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 15px 15px; 
+    grid-template-areas: 
+        "tarjeta_tarkov tarjeta_nitw tarjeta_indigo"
+        "tarjeta_webfishing tarjeta_zomboid tarjeta_astroneer";
+    .tarjeta_tarkov { grid-area: tarjeta_tarkov; }
+    .tarjeta_nitw { grid-area: tarjeta_nitw; }
+    .tarjeta_indigo { grid-area: tarjeta_indigo; }
+    .tarjeta_webfishing { grid-area: tarjeta_webfishing; }
+    .tarjeta_zomboid { grid-area: tarjeta_zomboid; }
+    .tarjeta_astroneer { grid-area: tarjeta_astroneer; }
+
+    div{
+        width: 100%;
+        height: 100%;
+        @include flex(flex, column, center, center);
+        h2{
+            font-size: 40px;
+            color: nth($colores, 5);
+        }
+        img{
+            width: auto;
+            height: 200px;
+        }
+        p{
+            font-size: 20px;
+            color: nth($colores, 5);
+        }
+    }
+}
+
+// PRODUCTOS.HTML
+
+.productos_videojuegos{
+    font-family: "Nunito", sans-serif;
+    background-color: hsla(0, 0%, 0%, 0.800);
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 200px 15px; 
+    grid-template-areas: 
+        "tarkov tarkov trailer_tarkov"
+        "trailer_nitw nitw nitw"
+        "indigo indigo trailer_indigo"
+        "trailer_webfishing webfishing webfishing"
+        "zomboid zomboid trailer_zomboid"
+        "trailer_astroneer astroneer astroneer";
+    .tarkov { grid-area: tarkov; }
+    .trailer_tarkov { grid-area: trailer_tarkov; }
+    .trailer_nitw { grid-area: trailer_nitw; }
+    .trailer_indigo { grid-area: trailer_indigo; }
+    .trailer_webfishing { grid-area: trailer_webfishing; }
+    .trailer_zomboid { grid-area: trailer_zomboid; }
+    .trailer_astroneer { grid-area: trailer_astroneer; }
+    .nitw { grid-area: nitw; }
+    .indigo { grid-area: indigo; }
+    .webfishing { grid-area: webfishing; }
+    .zomboid { grid-area: zomboid; }
+    .astroneer { grid-area: astroneer; }
+    div{
+        p{
+            color: nth($colores, 5);
+            font-size: 20px;
+            width: 95%;
+        }
+        img{
+            height: auto;
+        }
+        .img-30pct{
+            width: 30%;
+        }
+        &:not(.trailer){
+            width: 100%;
+            height: 100%;
+            @include flex(flex, column, center, center);
+        }
+    }
+    .trailer{
+        @include flex(flex, null, center, center);
+    }
+    .tarkov{
+        img{
+            width: 50%;
+        }
+    }
+}
+
+// PLATAFORMA.HTML
+
+.pawhub{
+    height: $hero;
+    background-color: nth($colores, 3);
+    // flex-wrap: wrap;
+    @include flex(flex, null, space-around, center);
+    .pawhub_invitacion{
+        h1{
+            color: nth($colores, 1);
+            font-size: 40px;
+            width: 800px;
+        }
+        p{
+            color: nth($colores, 5);
+            font-size: 30px;
+            width: 800px;
+        }
+    }
+}
+
+// NOSOTROS.HTML
+
+.about{
+    height: $hero;
+    background-image: url(../img/oficinas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: nth($colores, 3);
+    background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+    color: nth($colores, 5);
+    @include flex(flex, column, center, center);
+    // flex-wrap: wrap;
+    h1{
+        color: nth($colores, 1);
+        font-size: 40px;
+    }
+    p{
+        font-size: 30px;
+        width: 1300px;
+    }
+}
+
+// CONTACTO.HTML
+
+.contacto{
+    background-color: nth($colores, 3);
+    height: $hero;
+    @include flex(flex, null, space-around, center);
+    // flex-wrap: wrap;
+    .formulario{
+        color: nth($colores, 5);
+    }
+}
+

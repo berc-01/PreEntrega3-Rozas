@@ -59,7 +59,7 @@ header nav ul li a{
 }
 
 header nav ul li a:hover{
-    color: rgb(0, 0, 0);
+    color: black;
     transition: 0.3s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
 }
 
