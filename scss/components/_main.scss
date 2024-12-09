@@ -38,7 +38,7 @@
     padding: 30px;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: auto; 
     gap: 15px 15px; 
     grid-template-areas: 
         "tarjeta_tarkov tarjeta_nitw tarjeta_indigo"
@@ -51,10 +51,18 @@
     .tarjeta_astroneer { grid-area: tarjeta_astroneer; }
 
     div{
+        background-color: nth($colores, 7);
+        padding: 20px;
+        border-radius: 20px;
+        &:hover{
+            background-color: nth($colores, 4);
+            transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+        }
         width: 100%;
         height: 100%;
         @include flex(flex, column, center, center);
         h2{
+            text-align: center;
             font-size: 40px;
             color: nth($colores, 5);
         }
@@ -72,13 +80,12 @@
 // PRODUCTOS.HTML
 
 .productos_videojuegos{
-    font-family: "Nunito", sans-serif;
-    background-color: hsla(0, 0%, 0%, 0.800);
-    padding-bottom: 50px;
+    background-color: nth($colores, 3);
+    padding: 50px; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: auto; 
-    gap: 200px 15px; 
+    gap: 50px 50px; 
     grid-template-areas: 
         "tarkov tarkov trailer_tarkov"
         "trailer_nitw nitw nitw"
@@ -99,16 +106,25 @@
     .zomboid { grid-area: zomboid; }
     .astroneer { grid-area: astroneer; }
     div{
-        p{
-            color: nth($colores, 5);
-            font-size: 20px;
-            width: 95%;
-        }
-        img{
+        @include flex(flex, column, center, center);
+        .texto_producto{
+            width: 100%;
             height: auto;
+            background-color: nth($colores, 7);
+            padding: 20px;
+            border-radius: 20px;
+            &:hover{
+                background-color: nth($colores, 4);
+                transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+            }
+            p{
+                color: nth($colores, 5);
+                font-size: 20px;
+            }
         }
-        .img-30pct{
-            width: 30%;
+        .img-40pct{
+            width: 40%;
+            height: auto;
         }
         &:not(.trailer){
             width: 100%;
@@ -121,7 +137,8 @@
     }
     .tarkov{
         img{
-            width: 50%;
+            width: 60%;
+            height: auto;
         }
     }
 }
@@ -129,20 +146,95 @@
 // PLATAFORMA.HTML
 
 .pawhub{
-    height: $hero;
     background-color: nth($colores, 3);
-    // flex-wrap: wrap;
-    @include flex(flex, null, space-around, center);
     .pawhub_invitacion{
-        h1{
-            color: nth($colores, 1);
-            font-size: 40px;
-            width: 800px;
+        @include flex(flex, null, space-around, center);
+        height: $hero;
+        div{
+            background-color: nth($colores, 7);
+            padding: 30px;
+            border-radius: 25px;
+            width: 900px;
+            h1{
+                color: nth($colores, 1);
+                font-size: 35px;
+            }
+            p{
+                color: nth($colores, 5);
+                font-size: 35px;
+            }
         }
-        p{
+    }
+    .grilla_funciones{
+        height: auto;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: auto; 
+        gap: 15px 15px; 
+        grid-template-areas: 
+            "funciones funciones funciones"
+            "tienda red_social chat"
+            "taller actualizaciones noticias";
+        .funciones { grid-area: funciones;}
+        .tienda { grid-area: tienda; }
+        .red_social { grid-area: red_social; }
+        .chat { grid-area: chat; }
+        .taller { grid-area: taller; }
+        .actualizaciones { grid-area: actualizaciones; }
+        .noticias { grid-area: noticias; }
+        h2{
+            font-size: 40px;
+            text-align: center;
             color: nth($colores, 5);
-            font-size: 30px;
+        }
+        div{
+            background-color: nth($colores, 7);
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            color: nth($colores, 5);
+            @include flex(flex, column, space-evenly, center);
+            &:hover{
+                background-color: nth($colores, 1);
+                color: nth($colores, 6);
+                transition: 0.5s;
+            }
+            .bi{
+                font-size: 150px;
+            }
+            h3{
+                color: nth($colores, 5);
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+    .registrarse{
+        @include flex(flex, null, space-around, center);
+        padding: 50px;
+        height: auto;
+        .instrucciones{
+            background-color: nth($colores, 7);
+            border-radius: 20px;
+            padding: 30px;
             width: 800px;
+            &:hover{
+            background-color: nth($colores, 4);
+            color: nth($colores, 6);
+            transition: 0.5s;
+            }
+            @include flex(flex, column, null, center);
+            h3{
+                font-size: 35px;
+                color: nth($colores, 5);
+            }
+        }
+        .formulario{
+            @include flex(flex, null, center, center);
+            form{
+                color: nth($colores, 5);
+            }
         }
     }
 }
@@ -151,6 +243,7 @@
 
 .about{
     height: $hero;
+    padding: 70px;
     background-image: url(../img/oficinas.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -160,14 +253,12 @@
     background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
     color: nth($colores, 5);
     @include flex(flex, column, center, center);
-    // flex-wrap: wrap;
     h1{
         color: nth($colores, 1);
         font-size: 40px;
     }
     p{
         font-size: 30px;
-        width: 1300px;
     }
 }
 
@@ -175,11 +266,49 @@
 
 .contacto{
     background-color: nth($colores, 3);
-    height: $hero;
-    @include flex(flex, null, space-around, center);
+    color: nth($colores, 5);
+    @include flex(flex, column, space-around, center);
     // flex-wrap: wrap;
-    .formulario{
-        color: nth($colores, 5);
+    .consulta_formulario{
+        padding: 50px;
+        @include flex(flex, null, space-around, center);
+        width: 100%;
+        .consulta{
+            width: 650px;
+            background-color: nth($colores, 7);
+            border-radius: 20px;
+            padding: 30px;
+            &:hover{
+                background-color: nth($colores, 4);
+                transition: 0.5s;
+            }
+            h1{
+                color: nth($colores, 1);
+                font-size: 30px;
+            }
+            h2{
+                font-size: 30px;
+            }
+        }
+        .formulario_contacto{
+            width: 500px;
+        }
+    }
+    .maps{
+        @include flex(flex, null, space-around, center);
+        width: 100%;
+        padding: 50px;
+        h2{
+            width: 600px;
+            font-size: 30px;
+            background-color: nth($colores, 7);
+            border-radius: 20px;
+            padding: 30px;
+            &:hover{
+                background-color: nth($colores, 4);
+                transition: 0.5s;
+            }
+        }
     }
 }
 

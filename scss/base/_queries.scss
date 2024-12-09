@@ -1,11 +1,16 @@
+// INDEX.HTML
+
 @media screen and (max-width:1275px){
     .videojuegos{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
         grid-template-areas: 
             "tarjeta_tarkov tarjeta_nitw"
             "tarjeta_indigo tarjeta_webfishing"
             "tarjeta_zomboid tarjeta_astroneer"
+    }
+    .videojuegos div img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -20,17 +25,18 @@
     
     .hero .descripcion_paws{
         width: 550px;
+        height: auto;
     }
     
     .hero .descripcion_pawhub{
         width: 550px;
+        height: auto;
     }
 }
 
 @media screen and (max-width:870px){
     .videojuegos{
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
         grid-template-areas: 
             "tarjeta_tarkov" 
             "tarjeta_nitw"
@@ -66,12 +72,22 @@
     }
 
     .hero .descripcion_paws{
-        font-size: 15px;
         width: 450px;
+    }
+
+    .hero .descripcion_paws h1{
+        font-size: 30px;
+    }
+
+    .hero .descripcion_paws h2{
+        font-size: 30px;
+    }
+
+    .hero .descripcion_pawhub h2{
+        font-size: 30px;
     }
     
     .hero .descripcion_pawhub{
-        font-size: 15px;
         width: 450px;
     }
 }
@@ -90,31 +106,39 @@
     }
 
     .hero .descripcion_paws{
-        width: 300px;
-        height: auto;
+        width: 325px;
     }
     
     .hero .descripcion_pawhub{
-        width: 300px;
-        height: auto;
+        width: 325px;
+    }
+
+    .hero .descripcion_paws h1{
+        font-size: 25px;
+    }
+
+    .hero .descripcion_paws h2{
+        font-size: 25px;
+    }
+
+    .hero .descripcion_pawhub h2{
+        font-size: 25px;
     }
 
     .videojuegos div h1{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .videojuegos div img{
         width: 250px;
-        height: auto;
     }
 }
 
-/* PRODUCTOS.HTML MEDIA QUERIES */
+// PRODUCTOS.HTML
 
-@media screen and (max-width:1155px){
+@media screen and (max-width:1320px){
     .productos_videojuegos{
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto; 
+        grid-template-columns: 1fr;
         gap: 50px 15px; 
         grid-template-areas: 
             "tarkov "
@@ -131,13 +155,264 @@
             "trailer_astroneer"
     }
 
-    .productos_videojuegos div p{
+    .productos_videojuegos div .img-40pct{
+        width: 50%;
+        height: auto;
+    }
+
+    .productos_videojuegos .tarkov img{
         width: 70%;
+        height: auto;
     }
 }
 
-@media screen and (max-width:580px){
+@media screen and (max-width:660px){
     .productos_videojuegos .trailer{
         display: none;
+    }
+
+    .productos_videojuegos div .img-40pct{
+        width: 90%;
+        height: auto;
+    }
+
+    .productos_videojuegos .tarkov img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+// PLATAFORMA.HTML
+
+@media screen and (max-width:1360px){
+
+    .pawhub .pawhub_invitacion div{
+        width: 600px;
+    }
+
+    .pawhub .pawhub_invitacion img{
+        width: 340px;
+        height: auto;
+    }
+
+    .pawhub .pawhub_invitacion div h1{
+        font-size: 25px;
+    }
+
+    .pawhub .pawhub_invitacion div p{
+        font-size: 25px;
+    }
+
+    .pawhub .registrarse{
+        @include flex(null, null, space-between, null);
+    }
+
+    .pawhub .registrarse .instrucciones{
+        width: 600px;
+    }
+
+    .pawhub .registrarse .instrucciones h3{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:1070px){
+    .pawhub .grilla_funciones{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "funciones funciones"
+            "tienda red_social"
+            "chat taller"
+            "actualizaciones noticias";
+    }
+
+    .pawhub .grilla_funciones div .bi{
+        font-size: 125px;
+    }
+
+    .pawhub .grilla_funciones div h3{
+        font-size: 20px;
+    }
+
+    .pawhub .registrarse{
+        @include flex(null, column, null, null);
+    }
+
+    .pawhub .registrarse .formulario{
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .pawhub .pawhub_invitacion img{
+        width: 240px;
+        height: auto;
+    }
+
+    .pawhub .pawhub_invitacion div{
+        width: 500px;
+    }
+
+    .pawhub .pawhub_invitacion div h1{
+        font-size: 20px;
+    }
+
+    .pawhub .pawhub_invitacion div p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .pawhub .pawhub_invitacion div{
+        width: 400px;
+    }
+
+    .pawhub .pawhub_invitacion{
+        @include flex(null, column, null, null);
+    }
+
+    .pawhub .registrarse .instrucciones{
+        width: 400px;
+    }
+
+    .pawhub .registrarse .instrucciones h3{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .pawhub .grilla_funciones{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "funciones"
+            "tienda"
+            "red_social"
+            "chat"
+            "taller"
+            "actualizaciones"
+            "noticias";
+    }
+
+    .pawhub .pawhub_invitacion div{
+        width: 340px;
+    }
+
+    .pawhub .pawhub_invitacion img{
+        width: 200px;
+        height: auto;
+    }
+
+    .pawhub .registrarse .instrucciones{
+        width: 340px;
+    }
+}
+
+// NOSOTROS.HTML
+
+@media screen and (max-width:915px){
+    .about h1{
+        font-size: 35px;
+    }
+
+    .about p{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:685px){
+    .about h1{
+        font-size: 30px;
+    }
+
+    .about p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .about h1{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .about{
+        height: 1200px;
+    }
+}
+
+// CONTACTO.HTML
+
+@media screen and (max-width:1360px){
+    .contacto .consulta_formulario .consulta{
+        width: 500px;
+    }
+
+    .contacto .consulta_formulario .consulta h1{
+        font-size: 20px;
+    }
+
+    .contacto .consulta_formulario .consulta h2{
+        font-size: 20px;
+    }
+
+    .contacto .maps h2{
+        width: 450px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1170px){
+    .contacto .consulta_formulario .consulta{
+        width: 800px;
+    }
+
+    .contacto .consulta_formulario .consulta h1{
+        font-size: 25px;
+    }
+
+    .contacto .consulta_formulario .consulta h2{
+        font-size: 25px;
+    }
+
+    .contacto .consulta_formulario{
+        @include flex(null, column, null, null);
+    }
+
+    .contacto .consulta_formulario .formulario_contacto{
+        @include flex(flex, null, center, center);
+        height: 436px;
+    }
+
+    .contacto .formulario_contacto form{
+        width: 500px;
+    }
+
+    .contacto .maps h2{
+        display: none;
+    }
+}
+
+@media screen and (max-width:830px){
+    .contacto .consulta_formulario .consulta{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .contacto .consulta_formulario .consulta{
+        width: 345px;
+    }
+
+    .contacto .consulta_formulario .formulario_contacto{
+        width: 345px;
+    }
+
+    .contacto .formulario_contacto{
+        width: 345px;
+    }
+
+    .contacto .formulario_contacto form{
+        width: 345px;
     }
 }
